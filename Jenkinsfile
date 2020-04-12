@@ -5,7 +5,7 @@ pipeline {
         steps {
           sh 'echo I am fine'
           sh 'gradle builda'
-          sh 'echo 'built'
+          sh 'echo built'
         }
       }
     }
