@@ -4,8 +4,8 @@ pipeline {
       stage ('Git..'){
         steps {
           sh 'echo I am fine'
-          sh gradle build
-          sh echo 'built'
+          sh 'gradle builda'
+          sh 'echo 'built'
         }
       }
     }
