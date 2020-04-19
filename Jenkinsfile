@@ -25,5 +25,15 @@ pipeline {
                 }
             }
         }
+        stage('War'){
+            steps{
+                sh './gradlew build'
+            }
+        }
+        stage('Docker'){
+            steps {
+                sh 'docker build -t springapp:1.0 .'
+            }
+        }
     }
 }
