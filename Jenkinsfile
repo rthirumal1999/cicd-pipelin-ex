@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('SCM') {
-            steps {
-                scm checkout
-            }
-        }
         stage('Compile'){
             steps {
                 sh "./gradlew compileJava"
