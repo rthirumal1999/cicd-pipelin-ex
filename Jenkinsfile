@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Sonar'){
             environment {
-                stagecannerHome = tool 'MySonar'
+                stagecannerHome = tool 'MySonarScanner'
             }
             steps {
                 withSonarQubeEnv('sonarqube') {
