@@ -2,13 +2,19 @@ pipeline {
     agent any
     stages {
         stage('SCM') {
-            scm checkout
+            steps {
+                scm checkout
+            }
         }
         stage('Compile'){
-            sh "./gradlew compileJava"
+            steps {
+                sh "./gradlew compileJava"
+            }
         }
         stage('Junit'){
-            sh "./gradlew test"
+            steps {
+                sh "./gradlew test"
+            }
         }
         stage('Sonar'){
             environment {
