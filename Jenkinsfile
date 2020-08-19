@@ -28,6 +28,7 @@ pipeline {
         stage('War'){
             steps{
                 sh './gradlew build'
+                sh 'echo '
             }
         }
         stage('Docker'){
