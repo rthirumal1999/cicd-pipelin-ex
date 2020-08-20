@@ -29,6 +29,7 @@ pipeline {
             steps{
                 sh './gradlew build'
                 sh 'echo '
+                ch 'echo commit'
             }
         }
         stage('Docker'){
